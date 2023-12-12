@@ -1,0 +1,58 @@
+﻿@model Nop.Plugin.Widgets.Goftino.Models.ConfigurationModel
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+@await Component.InvokeAsync(typeof(StoreScopeConfigurationViewComponent))
+
+<form asp-controller="WidgetsGoftino" asp-action="Configure" method="post">
+    <div class="cards-group">
+        <div class="card card-default">
+            <div class="card-body">
+                @T("Plugins.Widgets.Godtino.Instructions")              
+            </div>
+           </div>
+        <div class="card card-default">
+            <div class="card-body">
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="TrackingScript_OverrideForStore" asp-input="TrackingScript" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="TrackingScript" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-textarea asp-for="TrackingScript" />
+                        <span asp-validation-for="TrackingScript"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="GoftinoCode_OverrideForStore" asp-input="GoftinoCode" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="GoftinoCode" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="GoftinoCode" />
+                        <span asp-validation-for="GoftinoCode"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="Enable_OverrideForStore" asp-input="Enable" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="Enable" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="Enable" />
+                        <span asp-validation-for="Enable"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        &nbsp;
+                    </div>
+                    <div class="col-md-9">
+                        <button type="submit" name="save" class="btn btn-primary">@T("Admin.Common.Save")</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

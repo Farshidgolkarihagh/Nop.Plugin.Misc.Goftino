@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Widgets",
+  "FriendlyName": "Goftino Online Chat",
+  "SystemName": "Widgets.Goftino",
+  "Version": "4.60",
+  "SupportedVersions": [ "4.60" ],
+  "Author": "Farshid Golkarihagh",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Widgets.Goftino.dll",
+  "Description": "This is chat plugin for Goftino"
+}
