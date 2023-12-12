@@ -5,6 +5,7 @@ namespace Nop.Plugin.Widgets.Goftino.Models
 {
     public record ConfigurationModel : BaseNopModel
     {
+	// able to set configuration for each store
         public int ActiveStoreScopeConfiguration { get; set; }
 
         [NopResourceDisplayName("Plugins.Widgets.Goftino.Enable")]
