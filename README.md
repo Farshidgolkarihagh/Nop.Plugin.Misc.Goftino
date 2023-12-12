@@ -22,5 +22,4 @@ Add the following for Goftino Code Template
 </script>
 <!---end GOFTINO code--->
 
-
 And add the Goftino Code obtained from the website to the "Goftino Code" textbox
